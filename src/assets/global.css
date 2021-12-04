@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #0B0D17;
+  overflow: hidden;
+}
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: 96px;
+  padding-left: 55px;
+}
+.header__logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+#nav {
+  position: relative;
+  height: 100%;
+  width: 830px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(45px);
+}
+#nav::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 95%;
+  transform: translateY(-50%);
+  height: 2px;
+  width: 100%;
+  background-color: #fff;
+  opacity: 0.25;
+}
+.nav__menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 48px;
+}
+.nav__menu li {
+  list-style: none;
+}
+.nav__menu a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  font-family: "Barlow Condensed", sans-serif;
+  letter-spacing: 2.7px;
+}
+.nav__menu span {
+  font-family: Barlow Condensed;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2.7px;
+  margin-right: 10px;
+}
+
+.title-section {
+  width: 100%;
+  max-width: 1140px;
+  position: absolute;
+  top: 13.7rem;
+  font-family: Barlow Condensed;
+  font-size: 28px;
+  line-height: 34px;
+  letter-spacing: 4.725px;
+  text-transform: uppercase;
+}
+.title-section span {
+  position: absolute;
+  left: calc((-26px + -28px));
+  font-family: Barlow Condensed;
+  font-size: 28px;
+  line-height: 34px;
+  letter-spacing: 4.725px;
+  mix-blend-mode: normal;
+  opacity: 0.25;
+}
+
+.card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  width: 445px;
+  height: 472px;
+}
+
+.card__title {
+  font-family: "Bellefair", serif;
+  font-size: 100px;
+  line-height: 115px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.card__info {
+  font-family: Barlow;
+  font-size: 18px;
+  line-height: 32px;
+  color: #d0d6f9;
+  margin-bottom: 54px;
+}
+
+.card__distance {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 28px 0;
+  border-top: 2px solid #383b4b;
+  column-gap: 79px;
+}
+.card__distance__container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 12px;
+}
+.card__distance__title {
+  font-family: Barlow Condensed;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 2.3625px;
+  text-transform: uppercase;
+  color: #d0d6f9;
+}
+.card__distance__info {
+  font-family: "Bellefair", serif;
+  font-size: 28px;
+  line-height: 32px;
+  text-transform: uppercase;
+}
