@@ -48,22 +48,23 @@ export default {};
   height: 382px;
 }
 .home__space-info__title {
-  font-family: 'Bellefair', serif;
+  font-family: "Bellefair", serif;
   font-size: 150px;
   line-height: 172px;
   color: #ffffff;
   margin-bottom: 30px;
 }
 .home__space-info__subtitle {
-  font-family: Barlow Condensed;
+  font-family: "Barlow Condensed", sans-serif;
   font-size: 28px;
+  font-weight: normal;
   line-height: 34px;
   letter-spacing: 4.725px;
   color: #d0d6f9;
   margin-bottom: 30px;
 }
 .home__space-info__text {
-  font-family: Barlow;
+  font-family: "Barlow", sans-serif;
   font-size: 18px;
   line-height: 32px;
   color: #d0d6f9;
@@ -99,7 +100,7 @@ export default {};
   background-color: #fff;
 }
 .home__explore span {
-  font-family: 'Bellefair', serif;
+  font-family: "Bellefair", serif;
   font-style: normal;
   font-weight: normal;
   font-size: 32px;

@@ -40,7 +40,4 @@ export default {
   justify-content: space-between;
   align-items: center;
 }
-.destination__section:nth-child(3) {
-  display: flex;
-}
 </style>

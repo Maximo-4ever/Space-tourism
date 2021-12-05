@@ -78,7 +78,7 @@ export default {
   column-gap: 36px;
 }
 .destination__container__names {
-  font-family: Barlow Condensed;
+  font-family: 'Barlow Condensed', sans-serif;
   font-size: 16px;
   line-height: 19px;
   letter-spacing: 2.7px;

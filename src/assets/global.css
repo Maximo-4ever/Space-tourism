@@ -4,8 +4,9 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #0B0D17;
+  background-color: #0b0d17;
   overflow: hidden;
+  font-family: "Barlow", sans-serif;
 }
 #header {
   display: flex;
@@ -24,7 +25,6 @@ body {
   border-radius: 50%;
   background-color: #fff;
 }
-
 #nav {
   position: relative;
   height: 100%;
@@ -63,7 +63,7 @@ body {
   letter-spacing: 2.7px;
 }
 .nav__menu span {
-  font-family: Barlow Condensed;
+  font-family: "Barlow Condensed", sans-serif;
   font-weight: bold;
   font-size: 16px;
   line-height: 19px;
@@ -72,11 +72,12 @@ body {
 }
 
 .title-section {
+  font-weight: normal;
   width: 100%;
   max-width: 1140px;
   position: absolute;
   top: 13.7rem;
-  font-family: Barlow Condensed;
+  font-family: "Barlow Condensed", sans-serif;
   font-size: 28px;
   line-height: 34px;
   letter-spacing: 4.725px;
@@ -85,7 +86,8 @@ body {
 .title-section span {
   position: absolute;
   left: calc((-26px + -28px));
-  font-family: Barlow Condensed;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: bold;
   font-size: 28px;
   line-height: 34px;
   letter-spacing: 4.725px;
@@ -93,6 +95,16 @@ body {
   opacity: 0.25;
 }
 
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* flex-wrap: wrap; */
+  flex-direction: row;
+  width: 1244px;
+}
+
+/* Card */
 .card {
   display: flex;
   align-items: flex-start;
@@ -101,22 +113,26 @@ body {
   width: 445px;
   height: 472px;
 }
-
 .card__title {
   font-family: "Bellefair", serif;
   font-size: 100px;
   line-height: 115px;
+  font-weight: normal;
   text-transform: uppercase;
   margin-bottom: 15px;
 }
+.card__title.md-title {
+  font-size: 56px;
+  line-height: 64px;
+  margin-bottom: 27px;
+}
 .card__info {
-  font-family: Barlow;
+  font-family: "Barlow", sans-serif;
   font-size: 18px;
   line-height: 32px;
   color: #d0d6f9;
   margin-bottom: 54px;
 }
-
 .card__distance {
   width: 100%;
   display: flex;
@@ -134,7 +150,7 @@ body {
   row-gap: 12px;
 }
 .card__distance__title {
-  font-family: Barlow Condensed;
+  font-family: "Barlow Condensed", sans-serif;
   font-size: 14px;
   line-height: 17px;
   letter-spacing: 2.3625px;
