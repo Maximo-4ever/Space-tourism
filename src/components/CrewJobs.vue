@@ -1,5 +1,5 @@
 <template>
-  <div class="flex">
+  <div class="flex-center mt">
     <article class="card">
       <h1 class="card__job">{{ crew[i].role }}</h1>
       <h3 class="card__title md-title">{{ crew[i].name }}</h3>
@@ -95,5 +95,40 @@ export default {
   height: 680px;
   max-width: 600px;
   margin-bottom: -10px;
+}
+@media (max-width: 1240px) {
+  #crew .flex-center {
+    flex-direction: column;
+    row-gap: 40px;
+  }
+  #crew .mt {
+    margin-top: 12rem;
+  }
+  #crew .card {
+    align-items: center;
+    text-align: center;
+    height: 325px;
+  }
+  #crew .card__job {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  .card__title.md-title {
+    font-size: 40px;
+    line-height: 46px;
+    margin-bottom: 16px;
+  }
+  #crew .card__info {
+    font-size: 16px;
+    margin-bottom: 0;
+    width: 85%;
+  }
+  .container-points {
+    width: 100%;
+    justify-content: center;
+  }
+  .card__img-container img {
+    height: 455px;
+  }
 }
 </style>

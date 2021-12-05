@@ -1,5 +1,5 @@
 <template>
-  <div class="flex">
+  <div class="flex-center mt">
     <div class="num-group" ref="root">
       <span class="point-active" @click="changeLaunch(0)">1</span>
       <span @click="changeLaunch(1)">2</span>
@@ -13,11 +13,17 @@
       </p>
     </article>
     <div class="card__img-container">
-      <img
-        class="person"
-        :src="require(`@/${technology[i].images.portrait.slice(2)}`)"
-        :alt="technology[i].name"
-      />
+      <picture>
+        <source
+          :srcset="require(`@/${technology[i].images.landscape.slice(2)}`)"
+          media="(max-width: 1240px)"
+        />
+        <img
+          class="person"
+          :src="require(`@/${technology[i].images.portrait.slice(2)}`)"
+          :alt="technology[i].name"
+        />
+      </picture>
     </div>
   </div>
 </template>
@@ -51,6 +57,9 @@ export default {
 </script>
 
 <style>
+#technology .flex-center {
+  column-gap: 1rem;
+}
 #technology .card {
   width: 470px;
 }

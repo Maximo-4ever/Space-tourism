@@ -5,7 +5,7 @@
 }
 body {
   background-color: #0b0d17;
-  overflow: hidden;
+  overflow-x: hidden;
   font-family: "Barlow", sans-serif;
 }
 #header {
@@ -71,12 +71,15 @@ body {
   margin-right: 10px;
 }
 
+.mt {
+  margin-top: 10rem;
+}
+
 .title-section {
   font-weight: normal;
-  width: 100%;
-  max-width: 1140px;
+  width: clamp(60rem, 75vw, 66rem);
   position: absolute;
-  top: 13.7rem;
+  top: 13rem;
   font-family: "Barlow Condensed", sans-serif;
   font-size: 28px;
   line-height: 34px;
@@ -95,13 +98,20 @@ body {
   opacity: 0.25;
 }
 
-.flex {
+.flex-center {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* flex-wrap: wrap; */
-  flex-direction: row;
-  width: 1244px;
+  width: clamp(67rem, 84vw, 73rem);
+}
+
+.grid-center {
+  width: clamp(67rem, 84vw, 73rem);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-content: center;
+  place-items: center;
 }
 
 /* Card */
@@ -162,4 +172,35 @@ body {
   font-size: 28px;
   line-height: 32px;
   text-transform: uppercase;
+}
+
+@media (max-width: 1240px) {
+  #header {
+    top: 0;
+  }
+  #nav {
+    width: 450px;
+  }
+  .nav__menu {
+    column-gap: 36px;
+  }
+  .nav__menu a {
+    font-size: 14px;
+  }
+  .nav__menu span {
+    display: none;
+  }
+  .title-section {
+    width: auto;
+    font-size: 20px;
+    top: 9rem;
+    left: 108px;
+  }
+  
+  .card__title.md-title {
+    font-size: 40px;
+  }
+  .card__info {
+    font-size: 16px;
+  }
 }

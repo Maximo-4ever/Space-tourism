@@ -41,7 +41,7 @@ export default {
     no-repeat;
   background-size: cover;
   background-position: bottom;
-  background-blend-mode: luminosity;
   color: #fff;
+  overflow: hidden;
 }
 </style>

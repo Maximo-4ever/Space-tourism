@@ -1,18 +1,9 @@
 <template>
-  <main id="destination" class="destination">
+  <main id="destination">
     <h2 class="title-section"><span>01</span> Pick your destination</h2>
-    <div class="trick-container">
-      <div class="destination__container-astro" @click="changeSection">
-        <span class="destination__container__names" id="moon">MOON</span>
-        <span class="destination__container__names" id="mars">MARS</span>
-        <span class="destination__container__names" id="europa">EUROPA</span>
-        <span class="destination__container__names" id="titan">TITAN</span>
-      </div>
-    </div>
     <DestinationAstros
       v-if="destinations.length !== 0"
       :destinations="destinations"
-      :i="destinationsIndex"
     />
   </main>
 </template>
@@ -20,30 +11,23 @@
 <script>
 import { ref } from "@vue/reactivity";
 import DestinationAstros from "../components/DestinationAstros.vue";
+import { provide } from "@vue/runtime-core";
 
 export default {
   components: { DestinationAstros },
   setup() {
     const destinations = ref([]);
     const destinationsIndex = ref(0);
+    provide("destinationsIndex", destinationsIndex);
 
     const dataJson = async () => {
       const res = await fetch("data.json");
       const data = await res.json();
       destinations.value = data.destinations;
-    }; dataJson();
-
-    const changeSection = (evnt) => {
-      const { target } = evnt;
-      if (target.classList.contains("destination__container__names")) {
-        if (target.id == "moon") destinationsIndex.value = 0;
-        if (target.id == "mars") destinationsIndex.value = 1;
-        if (target.id == "europa") destinationsIndex.value = 2;
-        if (target.id == "titan") destinationsIndex.value = 3;
-      }
     };
-    
-    return { destinations, destinationsIndex, dataJson, changeSection };
+    dataJson();
+
+    return { destinations, destinationsIndex, dataJson };
   },
 };
 </script>
@@ -56,33 +40,51 @@ export default {
   justify-content: center;
   flex-direction: column;
   background: #0b0d17
-    url("../assets/destination/background-destination-desktop.jpg") no-repeat;
+    url("../assets/destination/background-destination-desktop.jpg");
   background-size: cover;
   background-blend-mode: luminosity;
   color: #fff;
-  padding-top: 10em;
+  overflow: hidden;
 }
-.trick-container {
-  width: 100%;
-  max-width: 1140px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-.destination__container-astro {
-  width: 445px;
-  height: 34px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  column-gap: 36px;
-}
-.destination__container__names {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 16px;
-  line-height: 19px;
-  letter-spacing: 2.7px;
-  color: #d0d6f9;
-  cursor: pointer;
+
+@media (max-width: 1240px) {
+  .grid-center {
+    grid-template-columns: 1fr;
+  }
+  .mt {
+    margin-top: 16rem;
+  }
+  .trick-container {
+    display: none;
+  }
+  .destination__menu-astro {
+    margin-top: 52px;
+    justify-content: center;
+    grid-row: 2/3;
+  }
+  #destination .card {
+    width: 82vw;
+    max-width: 573px;
+    height: 430px;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+  }
+  #destination .card__title {
+    font-size: 80px;
+    margin-bottom: 8px;
+  }
+  #destination .card__info {
+    margin-bottom: 49px;
+  }
+  #destination .card__distance {
+    justify-content: center;
+  }
+  #destination .card__distance__container {
+    align-items: center;
+  }
+  #destination .destination__content-img__img {
+    width: 300px;
+  }
 }
 </style>

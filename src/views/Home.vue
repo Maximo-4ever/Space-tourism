@@ -1,6 +1,6 @@
 <template>
   <main id="home">
-    <div class="center">
+    <div class="home-center">
       <div class="home__space-info">
         <h2 class="home__space-info__subtitle">SO, YOU WANT TO TRAVEL TO</h2>
         <h1 class="home__space-info__title">SPACE</h1>
@@ -31,8 +31,9 @@ export default {};
   background-image: url("../assets/home/background-home-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
 }
-.center {
+.home-center {
   margin-top: 7.5em;
   width: 100%;
   display: flex;
@@ -104,5 +105,20 @@ export default {};
   font-style: normal;
   font-weight: normal;
   font-size: 32px;
+}
+
+@media (max-width: 1240px) {
+  #home {
+    background-image: url("../assets/home/background-home-tablet.jpg");
+    background-position: center;
+  }
+  .home-center {
+    flex-direction: column;
+    row-gap: 10vh;
+  }
+  .home__explore {
+    width: 242px;
+    height: 242px;
+  }
 }
 </style>
