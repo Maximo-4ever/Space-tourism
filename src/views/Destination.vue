@@ -97,11 +97,14 @@ export default {
   #destination .card {
     height: auto;
   }
+  #destination .card__title {
+    font-size: 58px;
+    line-height: normal;
+    margin-top: 20px;
+  }
   #destination .card__distance {
     flex-direction: column;
     row-gap: 32px;
   }
 }
-
-
 </style>

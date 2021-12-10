@@ -111,7 +111,7 @@ export default {
     font-size: 24px;
     margin-bottom: 8px;
   }
-  .card__title.md-title {
+  #crew .card__title.md-title {
     font-size: 40px;
     line-height: 46px;
     margin-bottom: 16px;

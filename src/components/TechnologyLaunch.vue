@@ -164,5 +164,9 @@ export default {
     line-height: normal;
     margin-bottom: 16px;
   }
+  #technology .card__info {
+    line-height: 25px;
+    letter-spacing: 1px;
+  }
 }
 </style>
