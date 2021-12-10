@@ -44,32 +44,4 @@ export default {
   color: #fff;
   overflow: hidden;
 }
-@media (max-width: 1240px) {
-  #technology .mt {
-    margin-top: 15.85rem;
-  }
-  #technology .flex-center {
-    flex-direction: column-reverse;
-    row-gap: 50px;
-  }
-  #technology .card__img-container img {
-    width: 100%;
-    height: 334px;
-  }
-  #technology .card {
-    justify-content: flex-start;
-    order: -1;
-    height: 320px;
-  }
-  .num-group {
-    flex-direction: row;
-    height: auto;
-    column-gap: 16px;
-  }
-  .num-group span {
-    font-size: 24px;
-    width: 60px;
-    height: 60px;
-  }
-}
 </style>

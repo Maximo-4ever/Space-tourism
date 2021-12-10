@@ -16,7 +16,7 @@
       <picture>
         <source
           :srcset="require(`@/${technology[i].images.landscape.slice(2)}`)"
-          media="(max-width: 1240px)"
+          media="(max-width: 1220px)"
         />
         <img
           class="person"
@@ -100,9 +100,69 @@ export default {
   color: #000;
   border-color: transparent;
 }
-
 #technology .card__img-container img {
   width: 515px;
   height: 527px;
+}
+
+@media (max-width: 1220px) {
+  #technology .mt {
+    margin-top: 15.85rem;
+  }
+  #technology .flex-center {
+    flex-direction: column-reverse;
+    row-gap: 50px;
+  }
+  #technology .card__img-container img {
+    width: 100%;
+    height: 334px;
+  }
+  #technology .card {
+    justify-content: flex-start;
+    order: -1;
+    height: 320px;
+  }
+  .num-group {
+    flex-direction: row;
+    height: auto;
+    column-gap: 16px;
+  }
+  .num-group span {
+    font-size: 24px;
+    width: 60px;
+    height: 60px;
+  }
+}
+@media (max-width: 560px) {
+  #technology .mt {
+    margin-top: 12rem;
+  }
+  #technology .flex-center {
+    row-gap: 33px;
+  }
+  #technology .card__img-container {
+    width: 100%;
+  }
+  #technology .card__img-container img {
+    width: 100%;
+    height: 170px;
+  }
+  .num-group span {
+    height: 40px;
+    width: 40px;
+    font-size: 16px;
+  }
+  #technology .card {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    height: 265px;
+  }
+  .card__title.md-title {
+    font-size: 24px;
+    line-height: normal;
+    margin-bottom: 16px;
+  }
 }
 </style>

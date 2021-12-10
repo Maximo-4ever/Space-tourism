@@ -1,18 +1,20 @@
 <template>
   <div class="flex-center mt">
-    <article class="card">
-      <h1 class="card__job">{{ crew[i].role }}</h1>
-      <h3 class="card__title md-title">{{ crew[i].name }}</h3>
-      <p class="card__info">
-        {{ crew[i].bio }}
-      </p>
+    <div class="card-container">
+      <article class="card">
+        <h1 class="card__job">{{ crew[i].role }}</h1>
+        <h3 class="card__title md-title">{{ crew[i].name }}</h3>
+        <p class="card__info">
+          {{ crew[i].bio }}
+        </p>
+      </article>
       <div class="container-points">
         <div class="points active" @click="changeRole(0)"></div>
         <div class="points" @click="changeRole(1)"></div>
         <div class="points" @click="changeRole(2)"></div>
         <div class="points" @click="changeRole(3)"></div>
       </div>
-    </article>
+    </div>
     <div class="card__img-container">
       <img
         :src="require(`@/${crew[i].images.png.slice(2)}`)"
@@ -71,10 +73,6 @@ export default {
   margin-bottom: 100px;
 }
 .container-points {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 1140px;
   display: flex;
   align-items: center;
   justify-content: start;
@@ -96,7 +94,7 @@ export default {
   max-width: 600px;
   margin-bottom: -10px;
 }
-@media (max-width: 1240px) {
+@media (max-width: 1220px) {
   #crew .flex-center {
     flex-direction: column;
     row-gap: 40px;
@@ -129,6 +127,39 @@ export default {
   }
   .card__img-container img {
     height: 455px;
+  }
+}
+@media (max-width: 560px) {
+  #crew .flex-center {
+    flex-direction: column-reverse;
+    row-gap: 68px;
+    padding-bottom: 20px;
+  }
+  #crew .card {
+    width: 95%;
+    justify-content: center;
+    height: 325px;
+  }
+  #crew .card__img-container {
+    width: 87%;
+    border-bottom: 2px solid #53576d87;
+  }
+  #crew .card__img-container img {
+    display: block;
+    margin: 0 auto;
+    height: 323px;
+  }
+  #crew .card-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+  .container-points {
+    margin-bottom: 1.8rem;
+  }
+  #crew .card__info {
+    font-size: 15px;
   }
 }
 </style>

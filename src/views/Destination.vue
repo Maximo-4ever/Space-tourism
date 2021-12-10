@@ -44,10 +44,10 @@ export default {
   background-size: cover;
   background-blend-mode: luminosity;
   color: #fff;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
-@media (max-width: 1240px) {
+@media (max-width: 1220px) {
   .grid-center {
     grid-template-columns: 1fr;
   }
@@ -83,8 +83,25 @@ export default {
   #destination .card__distance__container {
     align-items: center;
   }
-  #destination .destination__content-img__img {
+  .destination__content-img__img {
     width: 300px;
   }
 }
+@media (max-width: 560px) {
+  .destination__content-img__img {
+    width: 150px;
+  }
+  .destination__container__names {
+    font-size: 14px;
+  }
+  #destination .card {
+    height: auto;
+  }
+  #destination .card__distance {
+    flex-direction: column;
+    row-gap: 32px;
+  }
+}
+
+
 </style>

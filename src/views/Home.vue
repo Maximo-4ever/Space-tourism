@@ -107,7 +107,7 @@ export default {};
   font-size: 32px;
 }
 
-@media (max-width: 1240px) {
+@media (max-width: 1220px) {
   #home {
     background-image: url("../assets/home/background-home-tablet.jpg");
     background-position: center;
@@ -119,6 +119,37 @@ export default {};
   .home__explore {
     width: 242px;
     height: 242px;
+  }
+}
+@media (max-width: 560px)  {
+  .home-center {
+    margin-top: 96px;
+  }
+  .home__space-info {
+    width: 90%;
+    height: auto;
+    align-items: center;
+    text-align: center;
+  }
+  .home__space-info__subtitle {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+  .home__space-info__title {
+    font-size: 80px;
+    line-height: 100px;
+    margin-bottom: 16px;
+  }
+  .home__space-info__text {
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .home__explore {
+    height: 150px;
+    width: 150px;
+  }
+  .home__explore span {
+    font-size: 20px;
   }
 }
 </style>
